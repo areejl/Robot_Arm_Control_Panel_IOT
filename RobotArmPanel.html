@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+       
+
+        .A {
+            padding: 20px;
+        }
+
+        .slidecontainer {
+            width: 50%;
+            background: #ffffff;
+            width: 20%;
+            border-radius: 20px;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 80%;
+            height: 10px;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.8;
+            background: #d3d3d3;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+            .slider:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #000c75;
+                cursor: pointer;
+            }
+
+    </style>
+
+
+</head>
+
+<body bgcolor=#d3d6ed>
+
+    <br><br><br>
+    <h1><center>Robot Arm Control Panel</center></h1>
+
+
+    <center>
+        <div class="slidecontainer">
+            <br>
+            <h4><p>المحرك الأول: <span id="demo"></span></p></h4>
+            <input type="range" min="0" max="180" value="90" class="slider" id="myRange">
+            <br> <br>
+
+            <h4><p>المحرك الثاني: <span id="demo2"></span></p></h4>
+            <input type="range" min="0" max="180" value="90" class="slider" id="myRange2">
+            <br> <br>
+
+            <h4><p>المحرك الثالث: <span id="demo3"></span></p></h4>
+            <input type="range" min="0" max="180" value="90" class="slider" id="myRange3">
+            <br> <br>
+
+            <h4><p>المحرك الرابع: <span id="demo4"></span></p></h4>
+            <input type="range" min="0" max="180" value="90" class="slider" id="myRange4">
+            <br> <br>
+
+
+            <h4><p>المحرك الخامس: <span id="demo5"></span></p></h4>
+            <input type="range" min="0" max="180" value="90" class="slider" id="myRange5">
+            <br><br><br><br>
+
+
+        </div>
+    </center>
+
+    <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider.value;
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = slider.value;
+
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("demo4");
+output4.innerHTML = slider.value;
+
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+}
+
+var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("demo5");
+output5.innerHTML = slider.value;
+
+slider5.oninput = function() {
+  output5.innerHTML = this.value;
+}
+    </script>
+
+
+</body>
+</html>
